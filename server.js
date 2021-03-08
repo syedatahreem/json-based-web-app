@@ -9,29 +9,31 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 // app.use(function(req, res, next) {
-//   res.setHeader("Content-Type", "application/json");
+ 
 //   next();
 // });
 
 app.get('/', (req, res) => {
   res.setHeader("Content-Type", "application/json");
-  res.send('Please add a body to your request!')
+   
+  res.send({mssg: 
+    'Please add a body to your request!'})
 })
 
 app.post('/', (req, res) => {
-
+  res.setHeader("Content-Type", "application/json");
   try {
 
     const shows = req.body.payload
     const result = decodeReq(shows)
-    res.setHeader("Content-Type", "application/json");
+    
     res.send({
       response : result,
       check: "true"
     })
 
   } catch(error) {
-    res.setHeader("Content-Type", "application/json");
+    
     res.status(400).send({  
         "error": "Could not decode request: JSON parsing failed"
 
