@@ -5,6 +5,8 @@ const decodeReq = (shows) => {
       throw new Error;
     }
 
+    
+
   const result = []
   const requiredAttributes = ['drm', 'episodeCount', 'image', 'slug', 'title']
   let count = 0 // atleast one object in the shows array should have the requiredAttributes else throw error

@@ -23,7 +23,7 @@ app.post('/', (req, res) => {
  
   try {
 
-    const shows = req.body.payload
+    const shows = JSON.parse(req.body.payload)
     const result = decodeReq(shows)
     
     res.json({
