@@ -21,7 +21,8 @@ app.post('/', (req, res) => {
     const result = decodeReq(shows)
 
     res.send({
-      response : result
+      response : result,
+      check: "true"
     })
 
   } catch(error) {
