@@ -14,27 +14,26 @@ app.use(bodyParser.urlencoded({
 // });
 
 app.get('/', (req, res) => {
-  res.setHeader("Content-Type", "application/json");
+ 
    
-  res.send({mssg: 
+  res.json({mssg: 
     'Please add a body to your request!'})
 })
 
 app.post('/', (req, res) => {
-  res.setHeader("Content-Type", "application/json");
+ 
   try {
 
     const shows = req.body.payload
     const result = decodeReq(shows)
     
-    res.send({
-      response : result,
-      check: "true"
+    res.json({
+      response : result
     })
 
   } catch(error) {
     
-    res.status(400).send({  
+    res.status(400).json({  
         "error": "Could not decode request: JSON parsing failed"
 
     })
