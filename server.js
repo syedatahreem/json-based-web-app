@@ -14,6 +14,7 @@ app.use(bodyParser.urlencoded({
 // });
 
 app.get('/', (req, res) => {
+  res.setHeader("Content-Type", "application/json");
   res.send('Please add a body to your request!')
 })
 
