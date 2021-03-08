@@ -15,7 +15,6 @@ app.use(bodyParser.urlencoded({
 
 app.get('/', (req, res) => {
  
-   
   res.json({mssg: 
     'Please add a body to your request!'})
 })
