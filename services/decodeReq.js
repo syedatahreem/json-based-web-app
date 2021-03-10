@@ -1,5 +1,5 @@
-const checkArray = require ('./error_handling/checkArray')
-const storeData = require ('./utils/storeData')
+const checkArray = require ('../error_handling/checkArray')
+const storeData = require ('./storeData')
 
 const decodeReq = (shows) => {
   

@@ -1,6 +1,6 @@
 const bodyParser = require('body-parser')
 
-const checkError = (req, res, next) => {
+const bodyParsing = (req, res, next) => {
     bodyParser.json()(req, res, err => {
         if (err) {
             console.error(err);
@@ -13,4 +13,4 @@ const checkError = (req, res, next) => {
     });
   }
 
-  module.exports = checkError;
+  module.exports = bodyParsing;

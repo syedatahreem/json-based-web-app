@@ -4,7 +4,7 @@ const port = process.env.PORT || 3000
 const postRequest = require('./routes/postRequest')
 const getRequest = require('./routes/getRequest')
 //const bodyParser = require('body-parser')
-const checkError = require('./error_handling/checkError')
+const checkError = require('./error_handling/bodyParsing')
 //const checkError = require ('./error_handling/checkError')
 
 app.use((req,res,next)=>{
