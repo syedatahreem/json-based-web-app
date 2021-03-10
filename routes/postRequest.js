@@ -1,4 +1,4 @@
-const decodeReq = require('./decodeReq')
+const decodeReq = require('../decodeReq')
  const postRequest= async (req, res) => {
  
     try {
