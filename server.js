@@ -8,10 +8,12 @@ const bodyParser = require('body-parser')
 
 app.use((req, res, next) => {
   bodyParser.json()(req, res, err => {
-      if (err) {
+      
+    if (err) {
           console.error(err);
           return res.status(400).json({  
             "error": "Could not decode request: JSON parsing failed"
+    
         })
       }
 
