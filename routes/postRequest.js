@@ -3,11 +3,14 @@ const decodeReq = require('../services/decodeReq')
  
     try {
   
+      /*Attaches the request body and stores in shows*/
       const shows = await req.body.payload
+      /*Function decodeReq is been called by passing the request body*/
       const result = decodeReq(shows)
       
+      
       res.json({
-        response : result
+        response : result 
       })
   
     } catch(error) {
